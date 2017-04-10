@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   root 'pictures#index'
 
+  resources :pictures
 
   # Ignore the comments below for now
   # They are just documentation
