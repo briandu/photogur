@@ -55,3 +55,22 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.button {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  top: 50%;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: solid 2px white;
+  border-radius: 40px;
+}
