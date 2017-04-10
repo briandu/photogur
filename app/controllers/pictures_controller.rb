@@ -13,7 +13,6 @@ class PicturesController < ApplicationController
   end
 
   def create
-    render text: "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
 
     # make a new picture with what picture_params returns (which is a method we're calling)
     @picture = Picture.new(picture_params)
@@ -24,11 +23,6 @@ class PicturesController < ApplicationController
       # otherwise render the view associated with the action :new (i.e. new.html.erb)
       render :new
     end
-  end
-
-  private
-  def picture_params
-    params.require(:picture).permit(:artist, :title, :url)
   end
 
   def edit
@@ -46,9 +40,15 @@ class PicturesController < ApplicationController
   end
 
   def destroy
-   @picture = Picture.find(params[:id])
-   @picture.destroy
-   redirect_to pictures_url
- end
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to pictures_url
+  end
+
+  private
+  def picture_params
+    params.require(:picture).permit(:artist, :title, :url)
+  end
+
 
 end
