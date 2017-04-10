@@ -20,6 +20,7 @@ html {
 
 body {
   height: 100%;
+  margin: 0;
 }
 
 .nav_bar {
@@ -39,7 +40,7 @@ body {
 }
 
 .index_header {
-  height: 100%;
+  height: 90%;
   /*width: 100%;*/
   background-image: url(https://static.pexels.com/photos/292600/pexels-photo-292600.jpeg);
   background-repeat: no-repeat;
@@ -50,10 +51,39 @@ body {
 
 .logo {
   position: relative;
-  width: 250px;
+  width: 200px;
   margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.scroll_down {
+  position: relative;
+  text-align: center;
+  color: white;
+  top: 75%;
+}
+
+.pointer {
+  width: 20px;
+  margin: 0 auto;
+
+  animation: MoveUpDown .8s linear infinite;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 6px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
 .button {
@@ -83,3 +113,35 @@ body {
   -webkit-transition:.5s;
   transition:.5s;
 }
+
+main {
+  position: relative;
+  width: 100%;
+}
+
+.gallery_container {
+  display: flex;
+  margin-left: 44px;
+  margin-right: 44px;
+  overflow: hidden;
+}
+
+.gallery_item {
+  max-width: 260px;
+  display: inline-block;
+  border: solid 2px #808080;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+main img{
+  width: 100%;
+}
+/*.gallery_item {
+  display: block;
+  width: 300px;
+}
+
+.photo {
+  width: 300px;
+}*/

@@ -12,7 +12,30 @@
     <%= image_tag ("photogur-logo-01.svg")%>
   </div>
 
-  <div class="button">
-    <a href="/pictures">View Gallery</a>
+  <div class="scroll_down">
+    <p>Keep Scrolling</p>
+    <div class="pointer">
+      <%= image_tag ("pointer-02.svg")%>
+    </div>
   </div>
-</div>
+  <!-- <div class="button">
+    <a href="#gallery">View Gallery</a>
+  </div>
+</div> -->
+
+</header>
+
+<main>
+
+<%= link_to "New Picture", "/pictures/new" %>
+
+<ul class="gallery_container">
+<% @pictures.each do |picture| %>
+  <li class="gallery_item">
+      <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+  <p><%= picture.title %>, by: <%= picture.artist %></p>
+</li>
+<% end %>
+</ul>
+
+</main>
