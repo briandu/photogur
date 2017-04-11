@@ -27,13 +27,24 @@
 
 <main>
 
-<%= link_to "New Picture", "/pictures/new" %>
+<div class="gallery_header">
+
+  <div class="button">
+    <%= link_to "New Picture", "/pictures/new" %>
+  </div>
+
+</div>
 
 <ul class="gallery_container">
+
 <% @pictures.each do |picture| %>
   <li class="gallery_item">
       <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
-  <p><%= picture.title %>, by: <%= picture.artist %></p>
+    <ul class="picture_info">
+      <li class="picture_title"><%= picture.title %></li>
+      <br>
+      <li class="picture_artist">by: <%= picture.artist %></li>
+    </ul>
 </li>
 <% end %>
 </ul>
