@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 html {
   font-family: "Gotham", "Helvetica", sans-serif;
   height: 100%;
@@ -21,6 +22,10 @@ html {
 body {
   height: 100%;
   margin: 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 .nav_bar {
@@ -166,6 +171,68 @@ main {
 main img{
   width: 100%;
 }
+
+.form {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 400px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 12px;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #262626;
+}
+
+.photo_icon {
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  margin-top: 36px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: #4f99de;
+  font-size: 16px;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid 2px #4f99de;
+  border-radius: 40px;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+input[type=submit]:hover {
+  color: white;
+  background-color: #437bb0;
+  border: solid 2px #437bb0;
+}
+
 /*.gallery_item {
   display: block;
   width: 300px;
